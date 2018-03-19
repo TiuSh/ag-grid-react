@@ -6,13 +6,10 @@ import * as AgGrid from "ag-grid";
 import {ColDef, ColGroupDef} from "ag-grid";
 
 export interface AgGridColumnProps extends ColDef, ColGroupDef {
+  children: any[];
 }
 
 export class AgGridColumn extends Component<AgGridColumnProps, {}> {
-    constructor(public props: any, public state: any) {
-        super(props, state);
-    }
-
     render() {
         return null;
     }

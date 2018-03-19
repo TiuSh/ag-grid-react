@@ -1,13 +1,10 @@
-// ag-grid-react v17.0.0
 /// <reference types="react" />
 import { Component } from "react";
 import { ColDef, ColGroupDef } from "ag-grid";
 export interface AgGridColumnProps extends ColDef, ColGroupDef {
+    children: any[];
 }
 export declare class AgGridColumn extends Component<AgGridColumnProps, {}> {
-    props: any;
-    state: any;
-    constructor(props: any, state: any);
     render(): any;
     static mapChildColumnDefs(columnProps: any): ColDef[];
     static toColDef(columnProps: any): ColDef;

@@ -1,20 +1,20 @@
-// ag-grid-react v17.0.0
 /// <reference types="react" />
+import * as React from "react";
 import { Component } from "react";
 import * as AgGrid from "ag-grid";
 import { GridOptions } from "ag-grid";
 export interface AgGridReactProps extends GridOptions {
     gridOptions?: GridOptions;
+    containerStyle?: React.CSSProperties;
 }
-export declare class AgGridReact extends Component<AgGridReactProps, {}> {
-    props: any;
-    state: any;
-    static propTypes: any;
+export declare class AgGridReact extends Component<AgGridReactProps> {
+    static propTypes: {
+        gridOptions: any;
+    };
     gridOptions: AgGrid.GridOptions;
     api: AgGrid.GridApi;
     columnApi: AgGrid.ColumnApi;
     protected eGridDiv: HTMLElement;
-    constructor(props: any, state: any);
     render(): any;
     createStyleForDiv(): any;
     componentDidMount(): void;

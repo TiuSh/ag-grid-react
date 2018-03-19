@@ -10,20 +10,19 @@ import { AgReactComponent } from "./agReactComponent";
 
 export interface AgGridReactProps extends GridOptions {
     gridOptions?: GridOptions;
+    containerStyle?: React.CSSProperties
 }
 
-export class AgGridReact extends Component<AgGridReactProps, {}> {
-    static propTypes: any;
+export class AgGridReact extends Component<AgGridReactProps> {
+    static propTypes = {
+        gridOptions: PropTypes.object
+    };
 
     gridOptions: AgGrid.GridOptions;
     api: AgGrid.GridApi;
     columnApi: AgGrid.ColumnApi;
 
     protected eGridDiv: HTMLElement;
-
-    constructor(public props: any, public state: any) {
-        super(props, state);
-    }
 
     render() {
         return DOM.div({
@@ -213,10 +212,6 @@ export class AgGridReact extends Component<AgGridReactProps, {}> {
         }
     }
 }
-
-AgGridReact.propTypes = {
-    gridOptions: PropTypes.object
-};
 
 addProperties(AgGrid.ComponentUtil.getEventCallbacks(), PropTypes.func);
 addProperties(AgGrid.ComponentUtil.BOOLEAN_PROPERTIES, PropTypes.bool);

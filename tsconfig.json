@@ -3,15 +3,12 @@
     "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "jsx": "react",
     "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "lib",
     "target": "es5"
   },
-  "typeAcquisition": {
-    "enable": true,
-    "include": [
-      "ag-grid",
-      "react",
-      "react-dom"
-    ]
-  }
+  "include": ["./src/**/*"],
+  "exclude": ["./node_modules", "./lib", "./umd"]
 }

@@ -1,4 +1,3 @@
-// ag-grid-react v17.0.0
 import { IHeaderGroup, IHeaderGroupParams, IHeader, IHeaderParams, IFilterParams, IDate, IDateParams, ICellRenderer, ICellRendererParams, ICellEditor, ICellEditorParams, IFilter, ILoadingOverlayComp, ILoadingOverlayParams, INoRowsOverlayComp, INoRowsOverlayParams } from 'ag-grid';
 export interface AgReactFrameworkComponent<T> {
 }
